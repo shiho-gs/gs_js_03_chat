@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+
+ <head>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="chat.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDcDW8LwQdgheetHmoYkBDdsIXF01o4X_0",
+    authDomain: "gs20-027.firebaseapp.com",
+    databaseURL: "https://gs20-027-default-rtdb.firebaseio.com",
+    projectId: "gs20-027",
+    storageBucket: "gs20-027.appspot.com",
+    messagingSenderId: "315485736803",
+    appId: "1:315485736803:web:d974b684ff6af83f374d56"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<style>
+    ul > li:first-child {
+     color: #191970;
+     font-size: 25px;
+    }
+    ul > li:nth-child(2n) {
+     color:#e6e6fa;
+    }
+    ul > li:nth-child(2n):before {
+     content:"ユーザー名："
+    }
+  </style>
+ </head>
+
+ <body>
+
+  <div>
+   <!-- 投稿者 -->
+   <div>
+    <p>user name</p>
+    <textarea name="" id="jsi-name" cols="10" rows="1"></textarea>
+   </div>
+
+   <!-- メッセージを打ち込む部分 -->
+   <div>
+    <p>contents</p>
+    <textarea name="" id="jsi-msg" cols="30" rows="4"></textarea>
+   </div>
+  </div>
+
+  <!-- メッセージを送る部分 -->
+  <button name="button" id="jsi-button">send message!</button>
+
+  <!-- チャット内容が動的に生成される部分 -->
+  <ul id="jsi-board" style="list-style:none;">
+    <li>★chat★</li>
+  </ul>
+ </body>
+</html>
